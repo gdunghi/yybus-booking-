@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Feedback</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<form [formGroup]="form" (ngSubmit)="send()" >
+		<ion-list>
+			<ion-item>
+				<ion-label floating>
+					Name
+				</ion-label>
+				<ion-input formControlName="name" [(ngModel)]="name" type="text" ></ion-input>
+			</ion-item>
+			<ion-item >
+				<ion-label floating>
+					Message
+				</ion-label>
+				<ion-textarea row="3" formControlName="message" [(ngModel)]="message" ></ion-textarea>
+			</ion-item>
+		</ion-list>
+		<button ion-button full color="primary" >Send</button>
+	</form>
+</ion-content>

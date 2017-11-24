@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-item (click)="logout()">
+			<ion-icon item-left name="power" class="shut"></ion-icon>
+			<p>Logout</p>
+		</ion-item>
+	</ion-list>
+</ion-content>

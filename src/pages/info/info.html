@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-capitalize > {{ bus.route_name }} route </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content>
+	<ion-card>
+		<img src="">
+	  <ion-card-header text-capitalize>
+	    {{ bus.source }} - {{ bus.destination }}
+	  </ion-card-header>
+	
+	  <ion-card-content>
+	    <p> {{ bus.route_date }} at {{ bus.route_time }} </p>
+	    <p>Bus: {{ bus.bus }} </p>
+	  </ion-card-content>
+	
+	</ion-card>
+	<button ion-button color="primary" full (click)="book(bus, bus.route_name)" >Book Now</button>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Rescheduled Buses</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let item of items" (click)="bus(item)" >
+			<ion-thumbnail item-left>
+				<img src="">
+			</ion-thumbnail>
+			<h3 text-capitalize>{{ item.source }} - {{ item.destination }} </h3>
+			
+				
+				<ion-col>
+					<p> {{ item.route_date }} / {{ item.route_time }} </p>
+				</ion-col>
+			
+			
+		</ion-item>
+	</ion-list>
+
+</ion-content>

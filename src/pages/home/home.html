@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>YY Coaches</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card (click)="buses()" >
+    <ion-item class="items">
+    <ion-icon name="bus" class="icono" item-left></ion-icon>
+      <h3>Buses</h3>
+      <p>Buses available</p>
+    </ion-item>
+  </ion-card>
+  
+  
+  <ion-card>
+    <ion-item (click)="ticket()" >
+    <ion-icon name="clipboard" class="icon2" item-left></ion-icon>
+      <h3>My Tickets</h3>
+      <p>See your booked Tickets</p>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item (click)="reschedule()" >
+    <ion-icon name="refresh" class="icono" item-left></ion-icon>
+      <h3>Reschudled Buses</h3>
+      <p>View buses that were rescheduled</p>
+    </ion-item>
+  </ion-card>
+  
+  <ion-card (click)="settings()" >
+    <ion-item>
+    <ion-icon name="settings" class="icon2" item-left></ion-icon>
+      <h3>Settings</h3>
+      <p>Account settings</p>
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="feedback()" > 
+    <ion-item>
+    <ion-icon name="send" class="icono" item-left></ion-icon>
+      <h3>Feedback</h3>
+      <p>Give us some feedback</p>
+    </ion-item>
+  </ion-card>
+  <ion-fab right bottom>
+    <button ion-fab color="danger" ><ion-icon name="information"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+

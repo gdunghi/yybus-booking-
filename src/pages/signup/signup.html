@@ -1,0 +1,61 @@
+
+<ion-header>
+
+  <ion-navbar color="danger" >
+    <ion-title>signup</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<form [formGroup] = "form" (ngSubmit)="signUp()"  >
+	<ion-list>
+		<ion-item>
+			<ion-label floating>First Name</ion-label>
+			<ion-input type="text" formControlName="fname" [(ngModel)]="firstName" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>last Name</ion-label>
+			<ion-input type="text"  formControlName="lname" [(ngModel)]="lastName" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Email</ion-label>
+			<ion-input type="email" formControlName="email" [(ngModel)]="email" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Phone Number</ion-label>
+			<ion-input type="tel" formControlName="phone"  [(ngModel)]="contact" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label>Gender</ion-label>
+			<ion-select formControlName="gender" [(ngModel)]="cus_gender" >
+				<ion-option value="male" >Male</ion-option>
+				<ion-option value="female">Female</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>City</ion-label>
+			<ion-input type="text" formControlName="city" [(ngModel)]="city" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Address</ion-label>
+			<ion-textarea row="2" formControlName="address" [(ngModel)]="address" ></ion-textarea>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Username</ion-label>
+			<ion-input type="text"  formControlName="username" [(ngModel)]="username" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Password</ion-label>
+			<ion-input type="password" formControlName="password" [(ngModel)]="password" ></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label floating>Comfirm Password</ion-label>
+			<ion-input type="password" ></ion-input>
+		</ion-item>
+
+		<button ion-button full color="primary" >SignUp</button>
+	</ion-list>
+</form>
+</ion-content>

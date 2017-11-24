@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Tickets</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+	<div *ngIf="tickets == ''">
+		<h2 text-center>Ooops no tickets yet</h2>
+	</div>
+	<ion-list>
+		<ion-item *ngFor="let ticket of tickets" >
+			<ion-icon name="cash" item-left ></ion-icon>
+			<p text-capitalize>Route: {{ ticket.route }} </p>
+			<p>Number of seats: {{ ticket.seat_no }} </p> 
+		</ion-item>
+	</ion-list>
+</ion-content>
